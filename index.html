@@ -1820,20 +1820,5 @@
         }
       })();
     </script>
-    <script>
-function redirectIfNecessary() {
-  const screenRatio = window.innerWidth / window.innerHeight;
-  const mobileRatio = 9 / 16;
-  const mobileRatioRange = 0.95; // Adjust this value to control how close the ratio needs to be to the mobile ratio
-
-  if (screenRatio >= mobileRatio * (1 - mobileRatioRange) && screenRatio <= mobileRatio * (1 + mobileRatioRange) && window.location.href.includes('http://localhost:5500/')) {
-    window.location.href = 'https://dmdtutorials.com/m';
-  } else if (screenRatio < mobileRatio * (1 - mobileRatioRange) || screenRatio > mobileRatio * (1 + mobileRatioRange) && window.location.href.includes('http://localhost:5500/mobile/index.html')) {
-    window.location.href = 'https://dmdtutorials.com/';
-  }
-}
-
-window.addEventListener('resize', redirectIfNecessary);
-</script>
   </body>
 </html>
