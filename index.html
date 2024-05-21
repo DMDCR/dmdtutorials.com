@@ -1820,5 +1820,23 @@
         }
       })();
     </script>
+    <script>
+window.onload = function() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.SA||(window.SA={}),SA.redirection_mobile({
+            mobile_url: "https://dmdtutorials.com/m",
+            mobile_scheme: "https",
+            redirection_param: "mobile_redirect",
+            cookie_hours: 1,
+            keep_path: false,
+            keep_query: false,
+            append_referrer: false,
+            append_referrer_key: "original_referrer",
+            tablet_host: "https://dmdtutorials.com",
+            tablet_redirection: false
+        });
+    }
+};
+</script>
   </body>
 </html>
