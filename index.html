@@ -1821,22 +1821,19 @@
       })();
     </script>
     <script>
-window.onload = function() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        window.SA||(window.SA={}),SA.redirection_mobile({
-            mobile_url: "https://dmdtutorials.com/m",
-            mobile_scheme: "https",
-            redirection_param: "mobile_redirect",
-            cookie_hours: 1,
-            keep_path: false,
-            keep_query: false,
-            append_referrer: false,
-            append_referrer_key: "original_referrer",
-            tablet_host: "https://dmdtutorials.com",
-            tablet_redirection: false
-        });
-    }
-};
+function redirectIfNecessary() {
+  const screenRatio = window.innerWidth / window.innerHeight;
+  const mobileRatio = 9 / 16;
+  const mobileRatioRange = 0.95; // Adjust this value to control how close the ratio needs to be to the mobile ratio
+
+  if (screenRatio >= mobileRatio * (1 - mobileRatioRange) && screenRatio <= mobileRatio * (1 + mobileRatioRange) && window.location.href.includes('http://localhost:5500/')) {
+    window.location.href = 'https://dmdtutorials.com/m';
+  } else if (screenRatio < mobileRatio * (1 - mobileRatioRange) || screenRatio > mobileRatio * (1 + mobileRatioRange) && window.location.href.includes('http://localhost:5500/mobile/index.html')) {
+    window.location.href = 'https://dmdtutorials.com/';
+  }
+}
+
+window.addEventListener('resize', redirectIfNecessary);
 </script>
   </body>
 </html>
