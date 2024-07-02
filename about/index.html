@@ -3,6 +3,7 @@
 <link rel="icon" type="image/x-icon" href="/images/dmdsmall.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About DMD</title>
+<div style="position:fixed;top:96%;left:1%;"><copyright>© 2021-2024, DMD.</copyright></div>
 <style>
   /* SCROLLBAR */
 /* scrollbar width */
@@ -29,6 +30,13 @@
 html,body{
 font-family: Ubuntu;font-size: 22px;background-color:#000000;color:#FFFFFF;max-width:100%;overflow-x: hidden;
 }
+
+
+
+.all {margin-left:auto;
+    margin-right:auto;
+    width:1200px;}
+
 
 br {overflow-x: hidden;}
     .button {
@@ -70,16 +78,53 @@ br {overflow-x: hidden;}
 }
 
 bigrntxt {text-align:left;font-size:50px;font-weight:700;color:#00ff00;}
-</style>
+#popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 15px;
+        }
 
+        #popupOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            border-radius: 15px;
+        }
+copyright {
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-weight: bold;
+    color: #00ff00;
+}
+</style>
+<div id="popupOverlay"></div>
+<div id="popup" style="color:#000000">
+    <p>Your window is too small. You will be redirected to the legacy/mobile site shortly...</p>
+</div>
 <header>
   <div style="position:relative;margin:-8px;"><img src="./aboutbg.jpg" style="width:100%;height:50%;object-fit: cover;"></div>
 
 <div class="spacer" style="padding-top:10px;"></div>
 </header>
+<div class="all">
+
 <body>
 <div class="button-container" style="top:10px">
 <a href=https://youtube.com/@dmdev_><button class="button dmdgreenbutton"><b>&nbsp;&nbsp;My Youtube Channel&nbsp;&nbsp;</b></button></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href=https://dmdtutorials.com/><button class="button button1"><b>&nbsp;&nbsp;Return to homepage&nbsp;&nbsp;</b></button></a>
 </div>
 <div style="padding:10%;position: relative;">
@@ -89,8 +134,8 @@ bigrntxt {text-align:left;font-size:50px;font-weight:700;color:#00ff00;}
 <div style="display:flex;justify-content: center;">
 <bigrntxt style="font-size:100px;position:absolute;text-align:center;top:100px;">| DMD |</bigrntxt>
 </div>
-<div style="font-size:18px;position:relative;bottom:55%;left:38%;overflow-x: hidden;">
-<br>I'm a game and web developer from the US! I really enjoy coding and designing<br>websites, I also love animating in 2D and making games. I've had an<br>interest in computers for a long time! :D</br>
+<div style="font-size:18px;position:relative;bottom:400px;left:43%;overflow-x:hidden">
+<br>I'm a web and game developer from the US! I really enjoy coding and designing<br>websites, I also love animating in 2D and making 2D (3D sometimes) games. I've had an<br>interest in computers for a long time! :D</br>
 </div>
 </body>
 <script type="text/javascript">
@@ -99,6 +144,25 @@ bigrntxt {text-align:left;font-size:50px;font-weight:700;color:#00ff00;}
           window.location.href = "https://about2.dmdtutorials.com";
       }
   });
-</script>
+  window.addEventListener('resize', function() {
+            if (window.innerWidth < 1200) {
+                // Show the popup
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('popupOverlay').style.display = 'block';
 
+                // Wait 3 seconds and then redirect
+                setTimeout(function() {
+                    window.location.href = 'https://about2.dmdtutorials.com';
+                }, 3000);
+            } else {
+                // Hide the popup if the window is resized back to above 1200px
+                document.getElementById('popup').style.display = 'none';
+                document.getElementById('popupOverlay').style.display = 'none';
+            }
+        });
+
+        // Trigger the resize event to check the initial window size
+        window.dispatchEvent(new Event('resize'));
+</script>
+</div>
 </html>
