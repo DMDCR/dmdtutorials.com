@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<title>DMD Tutorials</title>
+<link rel="icon" type="image/x-icon" href="/images/dmdsmall.png">
+
+<header>
+  <img src="images/toplogo.webp" alt="a large banner that says DMD" style="width:100%; display:block;">
+</header>
+
+<style>
+/* Background Gradient and Font */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(135deg, #141414 0%, #282828 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Glassy Button Style */
+.button {
+    background: rgba(0, 255, 0, 0.3); /* Transparent green */
+    color: white;
+    border-radius: 20px;
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid rgba(0, 255, 0, 0.8);
+    font-size: 22px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.2);
+}
+.button:hover {
+    background: rgba(0, 255, 0, 0.5);
+    box-shadow: 0px 6px 20px rgba(0, 255, 0, 0.4);
+}
+
+.button2 {
+    font-weight: bold;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #00ff00;
+}
+
+/* Text Centering and Styling */
+.copyright {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.imgcenter {
+    display: block;
+    margin: 40px auto;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+/* Title Style */
+.titleyt {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Button Container */
+.button-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.6);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(178, 178, 178, 0.8);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.4);
+}
+</style>
+
+<body>
+<!-- Navigation buttons -->
+<div class="button-container">
+    <button class="button button1"><a href="https://dmdtutorials.com/about">About Me</a></button>
+    <button class="button button1"><a href="https://dmdtutorials.com/downloads">Downloads</a></button>
+    <button class="button button1"><a href="https://discord.gg/xPMCzA6G9r" target="_blank">My Discord</a></button>
+    <button class="button button2"><a href="https://youtube.com/@dmdev_" target="_blank">My YouTube Channel</a></button>
+</div>
+
+<!-- Image and video section -->
+<img src="images/bottomtext.webp" alt="Tech, Computers, Games" class="imgcenter">
+
+<div style="background-color:#37E885; padding:60px 0;">
+  <div class="titleyt">Latest YouTube Video</div>
+  <div style="display:flex; justify-content:center; margin-top:40px;">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IIXD8cI3iXo?si=pvGobdj2unWjShBh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Footer with links -->
+<footer>
+  <div class="copyright">© 2021-2024, DMD.</div>
+  <div class="copyright"><a href="https://youtube.com/@dmdev_" target="_blank"><u>My YouTube</u></a></div>
+</footer>
+
+</body>
+</html>
