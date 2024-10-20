@@ -122,5 +122,27 @@ I wanted to tell you something but it seems like your browser does not support i
 </div>
 <p class="text-center"><a>All copyright for "The Kinito Crew", "The Kinito Leisure and Entertainment Company" and every "KinitoPET" image belongs to TROY EN LTD, any leftover copyright not applied belongs to <dmd>DMD</dmd>.</p>
 <p class="text-center">Note: Images on this website may not match the actual software!</p>
+<script>
+    function isChromium() {
+        return /Chrome|Chromium/.test(navigator.userAgent) && !/Edg/.test(navigator.userAgent);
+    }
+
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad/.test(navigator.userAgent);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var browserLink = document.querySelector('a[href="browserkinito.html"]');
+        if (!isChromium() || isMobile()) {
+            browserLink.removeAttribute('href');
+            browserLink.style.pointerEvents = 'none';
+            
+            var notAvailableText = document.createElement('span');
+            notAvailableText.style.fontSize = '10px';
+            notAvailableText.textContent = ' (This feature requires a Chromium-based browser)';
+            browserLink.appendChild(notAvailableText);
+        }
+    });
+</script>
 </body>
 </html>
