@@ -45,13 +45,21 @@ copyright {
 
 .imgcenter {
   overflow-x: hidden;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-.titleyt {font-family:Ubuntu;color:white;font-size:34px;font-weight:bold;position:absolute;left:38%;}
+
+
+.center {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display:flex;
+  font-family:Ubuntu;color:white;font-size:34px;font-weight:bold;
+}
+
 
 /* Added a container to hold the buttons */
 .button-container {
@@ -104,14 +112,15 @@ copyright {
     <button class="button button1"><b><a href="https://discord.gg/xPMCzA6G9r" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Discord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
     <button class="button button2"><b><a href="https://youtube.com/@dmdev_" target="_blank">&nbsp;&nbsp;My Youtube Channel&nbsp;&nbsp;</a></b></button>
 </div>
+    
+<div class="center">
+<img src="images/bottomtext.webp" alt="Tech, Computers, Games" class="imgcenter">
+</div>
+<div style="background-color:#37E885;padding:0px;position:absolute;top:900px;width:100%;height:575px;">
 
-<img src="images/bottomtext.webp" alt="Tech, Computers, Games" style="position:absolute; top:700px; left:25%" class="imgcenter">
-
-<div style="background-color:#37E885;padding:0px;position:absolute;top:200%;width:100%;height:70%">
-
-<div class="titleyt" style="text-align:center;">Latest Youtube Video</div>
-<div style="display:flex;justify-content:center;position:relative;top:64px">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6Es1FrwfqOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="center" style="display:flex;justify-content:center;position:relative;"> Latest Youtube Video</div>
+<div style="display:flex;justify-content:center;position:relative;top:30px">
+<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/6Es1FrwfqOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 </div>
 <div style="position:fixed;top:96%;left:1%;"><copyright>© 2021-2025, DMD.</copyright></div>
