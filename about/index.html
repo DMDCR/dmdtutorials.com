@@ -112,7 +112,7 @@ copyright {
 </style>
 <div id="popupOverlay"></div>
 <div id="popup" style="color:#000000">
-    <p>Your window is too small. You will be redirected to the legacy/mobile site shortly...</p>
+    <p>Your window is too small, and this page doesn't support it. You will be redirected back to the homepage shortly...</p>
 </div>
 <header>
   <div style="position:relative;margin:-8px;"><img src="./aboutbg.jpg" style="width:100%;height:50%;object-fit: cover;"></div>
@@ -141,7 +141,7 @@ copyright {
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function() {
       if (/Mobi|Android/i.test(navigator.userAgent)) {
-          window.location.href = "https://about2.dmdtutorials.com";
+          window.location.href = "https://dmdtutorials.com/home";
       }
   });
   window.addEventListener('resize', function() {
@@ -152,7 +152,7 @@ copyright {
 
                 // Wait 3 seconds and then redirect
                 setTimeout(function() {
-                    window.location.href = 'https://about2.dmdtutorials.com';
+                    window.location.href = 'https://dmdtutorials.com/home';
                 }, 3000);
             } else {
                 // Hide the popup if the window is resized back to above 1200px
