@@ -148,14 +148,17 @@ copyright {
 }
 .scanline {
   background-image: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.05) 1px,
-    transparent 1px,
-    transparent 3px
+    to bottom,
+    rgba(0, 0, 0, 0.2),     /* darker line */
+    rgba(0, 0, 0, 0.2) 2px, /* thickness of line */
+    transparent 2px,
+    transparent 4px         /* spacing between lines */
   );
-  pointer-events: none; /* so it doesn’t block clicks */
+  background-size: 100% 4px;
+  z-index: 1;
+  position: relative;
 }
+
 </style>
 <body>
 <div class="button-container" style="padding:1%">
