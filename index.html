@@ -117,6 +117,33 @@ copyright {
     display: block;
     color: #00ff00;
 }
+
+/* Container for each post + image */
+.post-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;    /* space between posts */
+}
+
+/* Image box */
+.post-image {
+  width: 200px;           /* or whatever max width you like */
+  height: auto;
+  margin-right: 20px;     /* space between image & link */
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Link styling */
+.post-link {
+  font-size: 24px;
+  color: #00ff00;
+  text-decoration: none;
+}
+.post-link:hover {
+  text-decoration: underline;
+}
 </style>
 <body>
 <div class="button-container" style="padding:1%">
@@ -145,18 +172,34 @@ copyright {
 <script>
   fetch('posts/posts.json')
     .then(res => {
-      if (!res.ok) throw new Error('Network response was stinky, try again.');
+      if (!res.ok) throw new Error('Network response was stinky, reload the page lol');
       return res.json();
     })
     .then(posts => {
       const container = document.getElementById('blog-posts');
       posts.forEach(post => {
-        // create link element for each post i guess
+        // 1. create wrapper
+        const item = document.createElement('div');
+        item.className = 'post-item';
+
+        // 2. if image exists, add it
+        if (post.image) {
+          const img = document.createElement('img');
+          img.src = post.image;
+          img.alt = post.title;
+          img.className = 'post-image';
+          item.appendChild(img);
+        }
+
+        // 3. create link
         const a = document.createElement('a');
+        a.href = `posts/${post.file}`;
         a.className = 'post-link';
-        a.href = `posts/${post.file}`;          // post.file is the file, idk what else to say
-        a.textContent = `${post.title}`;        // post.title is the fucking name.
-        container.appendChild(a);
+        a.textContent = post.title;
+        item.appendChild(a);
+
+        // 4. append to container
+        container.appendChild(item);
       });
     })
     .catch(err => {
