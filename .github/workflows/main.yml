@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies (if needed)
-        run: npm install # optional if your script doesn't use any npm packages
-
       - name: Run script
         run: node scripts/generate-posts-json.js
 
