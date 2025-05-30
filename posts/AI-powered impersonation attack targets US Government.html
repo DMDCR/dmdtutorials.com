@@ -85,38 +85,17 @@
       font-size: 0.9rem;
     }
   </style>
-  <style>
-.typing-container {
-  display: inline-block;
-  border-right: 2px solid #0f0;
-  font: inherit;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow: hidden;
-  max-width: 100%;
-  animation: typing var(--typing-time, 4s) steps(var(--char-count, 100), end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0ch; }
-  to { width: var(--char-count, 100)ch; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-  </style>
 </head>
 <body>
   <div class="terminal">
     <h1><!-- EDIT HERE: Main Title -->AI-powered impersonation attack targets US Government.</h1>
-    <p class="typing-container"><!-- EDIT HERE: Tagline -->The FBI is currently investigating a sophisticated impersonation scheme targeting White House Chief of Staff Susie Wiles. The impersonator accessed Wiles' personal cellphone contacts and used AI-generated voice technology to mimic her voice in calls and messages to high-profile individuals, including senators, governors, and business executives. The messages, which came from unfamiliar numbers, included requests for sensitive information, such as lists of individuals eligible for presidential pardons, and even solicited money transfers. Wiles has informed her contacts about the breach and advised them to disregard any suspicious communications. The FBI has ruled out foreign state involvement but emphasizes the seriousness of the threat to cybersecurity and government officials. his incident highlights the growing concerns over the use of AI in cyberattacks, particularly the potential for AI-generated deepfakes to impersonate public figures and manipulate information. Cybersecurity experts warn that such technologies can be used to create convincing impersonations, posing significant risks to national security and the integrity of communications.</p>
+    <p><!-- EDIT HERE: Tagline -->The FBI is currently investigating a sophisticated impersonation scheme targeting White House Chief of Staff Susie Wiles. The impersonator accessed Wiles' personal cellphone contacts and used AI-generated voice technology to mimic her voice in calls and messages to high-profile individuals, including senators, governors, and business executives. The messages, which came from unfamiliar numbers, included requests for sensitive information, such as lists of individuals eligible for presidential pardons, and even solicited money transfers. Wiles has informed her contacts about the breach and advised them to disregard any suspicious communications. The FBI has ruled out foreign state involvement but emphasizes the seriousness of the threat to cybersecurity and government officials. his incident highlights the growing concerns over the use of AI in cyberattacks, particularly the potential for AI-generated deepfakes to impersonate public figures and manipulate information. Cybersecurity experts warn that such technologies can be used to create convincing impersonations, posing significant risks to national security and the integrity of communications.</p>
 
     <h2><!-- EDIT HERE: Section Title -->Recent Entries</h2>
     <ul class="posts">
       <!-- EDIT HERE: Copy/paste one <li> per post, update text & link -->
       <li><a href="https://dmdtutorials.com/posts/Asus%20Routers%20hijacked%20in%20Stealthy%20Cyber%20Campaign.html">01: Asus Router Hijack</a></li>
-      <li><a href="/welcome">00: Welcome!</a></li>
+      <li><a href="./welcome">00: Welcome!</a></li>
       <!-- END POSTS -->
     </ul>
 
@@ -127,22 +106,5 @@
       © 2021-2025, DMD™ - We don't know what we're doing.
     </div>
   </div>
-  <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const typingEl = document.querySelector('.typing-container');
-    if (typingEl) {
-      const text = typingEl.textContent.trim();
-      const count = text.length;
-
-      // set character count as CSS variable
-      typingEl.style.setProperty('--char-count', count);
-
-      // optionally: auto adjust animation speed (like 0.05s per char)
-      const speed = Math.max(1.5, count * 0.05); // tweak as needed
-      typingEl.style.setProperty('--typing-time', `${speed}s`);
-    }
-  });
-</script>
-
 </body>
 </html>
