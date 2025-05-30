@@ -88,17 +88,18 @@
   <style>
 .typing-container {
   display: inline-block;
-  overflow: hidden;
-  border-right: 2px solid #0f0; /* cursor */
-  animation: typing 4s steps(300, end), blink .75s step-end infinite;
+  border-right: 2px solid #0f0;
   font: inherit;
-  white-space: normal; /* wrap lines */
-  max-width: 100%; /* don’t overflow container */
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+  max-width: 100%;
+  animation: typing var(--typing-time, 4s) steps(var(--char-count, 100), end), blink .75s step-end infinite;
 }
 
 @keyframes typing {
   from { width: 0ch; }
-  to { width: 1000ch; } /* go bigger than needed */
+  to { width: var(--char-count, 100)ch; }
 }
 
 @keyframes blink {
@@ -126,5 +127,22 @@
       © 2021-2025, DMD™ - We don't know what we're doing.
     </div>
   </div>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const typingEl = document.querySelector('.typing-container');
+    if (typingEl) {
+      const text = typingEl.textContent.trim();
+      const count = text.length;
+
+      // set character count as CSS variable
+      typingEl.style.setProperty('--char-count', count);
+
+      // optionally: auto adjust animation speed (like 0.05s per char)
+      const speed = Math.max(1.5, count * 0.05); // tweak as needed
+      typingEl.style.setProperty('--typing-time', `${speed}s`);
+    }
+  });
+</script>
+
 </body>
 </html>
