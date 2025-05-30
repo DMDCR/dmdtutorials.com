@@ -142,26 +142,28 @@ copyright {
     <div class="center" style="margin-bottom: 20px;">Posts</div>
     <div id="blog-posts" style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;"></div>
   </div>
-  <script>
-    fetch('https://dmdtutorials.com/posts/posts.json?' + new Date().getTime())
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('blog-posts');
-        data.forEach(post => {
-          if (post.name !== 'index.html') {
-            const link = document.createElement('a');
-            link.href = post.path;
-            link.className = 'post-link';
-            link.textContent = post.name.replace('.html', '').replace(/-/g, ' ');
-            container.appendChild(link);
-          }
-        });
-      })
-      .catch(err => {
-        const fallback = document.getElementById('blog-posts');
-        fallback.innerHTML = '<p style="color:red;">failed to load posts, did you check under the desk? :(</p>';
-        console.error(err);
+<script>
+  fetch('posts/posts.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Network response was stinky, try again.');
+      return res.json();
+    })
+    .then(posts => {
+      const container = document.getElementById('blog-posts');
+      posts.forEach(post => {
+        // create link element for each post i guess
+        const a = document.createElement('a');
+        a.className = 'post-link';
+        a.href = `posts/${post.file}`;          // post.file is the file, idk what else to say
+        a.textContent = `${post.title}`;        // post.title is the fucking name.
+        container.appendChild(a);
       });
-  </script>
+    })
+    .catch(err => {
+      console.error('Fetch error:', err);
+      document.getElementById('blog-posts').innerHTML =
+        '<p style="color:red;">failed to load posts :(</p>';
+    });
+</script>
 </body>
 </html>
