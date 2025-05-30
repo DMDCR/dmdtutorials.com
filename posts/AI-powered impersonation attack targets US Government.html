@@ -89,21 +89,21 @@
 .typing-container {
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
   border-right: 2px solid #0f0; /* cursor */
-  animation: typing 2s steps(120, end), blink .75s step-end infinite;
+  animation: typing 4s steps(300, end), blink .75s step-end infinite;
   font: inherit;
+  white-space: normal; /* wrap lines */
+  max-width: 100%; /* don’t overflow container */
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0ch; }
+  to { width: 1000ch; } /* go bigger than needed */
 }
 
 @keyframes blink {
   50% { border-color: transparent; }
 }
-
   </style>
 </head>
 <body>
