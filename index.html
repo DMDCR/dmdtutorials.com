@@ -1,129 +1,161 @@
 <!DOCTYPE HTML>
 <html>
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-<title>| DMD |</title>
-<link rel="icon" type="image/x-icon" href="/images/smallericon.png">
-<header>
-<img src="images/toptext.png" alt="a large banner that says the name, DMD" style="min-height:100%;min-width:100%;display:block;right:20%;max-width:100%">
-</header>
-<style>
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    background-color: #141414;
-    margin: 0;
-    font-family: Ubuntu;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
-}
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+  <title>| DMD |</title>
+  <link rel="icon" type="image/x-icon" href="/images/smallericon.png">
+  <style>
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: #141414;
+      margin: 0;
+      font-family: Ubuntu;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: 100%;
+    }
 
-.button {
-  background-color: #141414;
-  color: #00ff00;
-  border-radius: 12px;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: Ubuntu;
-  border: 4px solid;
-  font-size: 25px;
-}
-.button1 {border-color: #00ff00;}
-.button2 {font-weight:bold;}
+    .button {
+      background-color: #141414;
+      color: #00ff00;
+      border-radius: 12px;
+      padding: 13px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: Ubuntu;
+      border: 4px solid;
+      font-size: 25px;
+    }
+    .button1 { border-color: #00ff00; }
+    .button2 { font-weight: bold; }
 
-a {text-decoration: none;color:#00ff00}
+    a { text-decoration: none; color: #00ff00 }
 
-copyright {
-    font-family: Ubuntu;
-    font-size: 17px;
-    font-weight: bold;
-    color: #00ff00;
-}
+    copyright {
+      font-family: Ubuntu;
+      font-size: 17px;
+      font-weight: bold;
+      color: #00ff00;
+    }
 
-.imgcenter {
-  overflow-x: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+    .imgcenter {
+      overflow-x: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
 
+    .center {
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      font-family: Ubuntu;
+      color: white;
+      font-size: 34px;
+      font-weight: bold;
+    }
 
+    .button-container {
+      overflow-x: hidden;
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
 
-.center {
-  margin: auto;
-  width: 100%;
-  text-align: center;
-  display:flex;
-  font-family:Ubuntu;color:white;font-size:34px;font-weight:bold;
-}
+    @media (max-width: 768px) {
+      .button {
+        font-size: 18px;
+      }
+    }
 
+    .button:not(:last-child) {
+      margin-right: 10px;
+    }
 
-/* Added a container to hold the buttons */
-.button-container {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #141414; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #646464; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B2B2B2; 
+    }
 
-/* Media query for responsive button size */
-@media (max-width: 768px) {
-  .button {
-    font-size: 18px;
-  }
-}
+    .blog-container {
+      margin-top: 150px;
+      padding: 20px;
+      color: white;
+      font-family: Ubuntu;
+    }
 
-/* Added margin between buttons */
-.button:not(:last-child) {
-  margin-right: 10px;
-}
+    .post-link {
+      font-size: 24px;
+      margin-bottom: 15px;
+      display: block;
+      color: #00ff00;
+    }
+  </style>
+</head>
 
-
-/* SCROLLBAR */
-/* scrollbar width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #141414; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #646464; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #B2B2B2; 
-}
-/* end of scrollbar stuff */
-</style>
 <body>
-<div class="button-container" style="padding:1%">
-    <button class="button button1"><b><a href=https://dmdtutorials.com/about>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
-    <button class="button button1"><b><a href=https://dmdtutorials.com/downloads>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Downloads and Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
+  <header>
+    <img src="images/toptext.png" alt="a large banner that says the name, DMD" style="min-height:100%;min-width:100%;display:block;right:20%;max-width:100%">
+  </header>
+
+  <div class="button-container" style="padding:1%">
+    <button class="button button1"><b><a href="https://dmdtutorials.com/about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
+    <button class="button button1"><b><a href="https://dmdtutorials.com/downloads">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Downloads and Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
     <button class="button button1"><b><a href="https://discord.gg/xPMCzA6G9r" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Discord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></b></button>
     <button class="button button2"><b><a href="https://youtube.com/@dmdev_" target="_blank">&nbsp;&nbsp;My Youtube Channel&nbsp;&nbsp;</a></b></button>
-</div>
-    
-<div class="center">
-<img src="images/bottomtext.webp" alt="Tech, Computers, Games" class="imgcenter">
-</div>
-<div style="background-color:#37E885;padding:0px;position:absolute;top:900px;width:100%;height:575px;">
+  </div>
 
-<div class="center" style="display:flex;justify-content:center;position:relative;">Latest Youtube Video</div>
-<div style="display:flex;justify-content:center;position:relative;top:30px">
-<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/6Es1FrwfqOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<div style="position:fixed;top:96%;left:1%;"><copyright>© 2021-2025, DMD™</copyright></div>
-<div style="position:fixed;top:96%;right:1%;"><copyright><a href="https://youtube.com/@dmdev_" target="_blank"><u>My Youtube</u></a></copyright></div>
+  <div class="center">
+    <img src="images/bottomtext.webp" alt="Tech, Computers, Games" class="imgcenter">
+  </div>
 
+
+
+  <div style="background-color:#37E885;padding:0px;position:relative;top:50px;width:100%;height:575px;">
+    <div class="center" style="justify-content:center;position:relative;">Latest Youtube Video</div>
+    <div style="display:flex;justify-content:center;position:relative;top:30px">
+      <iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/6Es1FrwfqOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div style="position:fixed;top:96%;left:1%;"><copyright>© 2021-2025, DMD™</copyright></div>
+  <div style="position:fixed;top:96%;right:1%;"><copyright><a href="https://youtube.com/@dmdev_" target="_blank"><u>My Youtube</u></a></copyright></div>
+  <div class="blog-container">
+    <div class="center" style="margin-bottom: 20px;">Posts</div>
+    <div id="blog-posts" style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;"></div>
+  </div>
+  <script>
+    fetch('posts/posts.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('blog-posts');
+        data.forEach(post => {
+          if (post.name !== 'index.html') {
+            const link = document.createElement('a');
+            link.href = post.path;
+            link.className = 'post-link';
+            link.textContent = post.name.replace('.html', '').replace(/-/g, ' ');
+            container.appendChild(link);
+          }
+        });
+      })
+      .catch(err => {
+        const fallback = document.getElementById('blog-posts');
+        fallback.innerHTML = '<p style="color:red;">failed to load posts, did you check under the desk? :(</p>';
+        console.error(err);
+      });
+  </script>
 </body>
 </html>
