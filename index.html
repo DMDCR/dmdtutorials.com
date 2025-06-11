@@ -185,7 +185,8 @@ copyright {
 <div style="position:fixed;top:96%;right:1%;"><copyright><a href="https://youtube.com/@dmdev_" target="_blank"><u>My Youtube</u></a></copyright></div>
 
 <script>
-  fetch('posts/posts.json')
+    // fetch and bypass cache, thanks cloudflare.
+  fetch('posts/posts.json?' + Math.random())
     .then(res => {
       if (!res.ok) throw new Error('Network response was stinky, reload the page lol');
       return res.json();
