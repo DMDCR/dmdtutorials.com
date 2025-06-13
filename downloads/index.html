@@ -231,7 +231,7 @@ if you would like to contact me, please email me at the email shown above!
             <div class="popup">
                 <h2>Warning</h2>
                 <p id="popupMessage">Loading time information...</p>
-                <button class="close-btn" onclick="closePopup()">Close</button>
+                <button class="close-btn">Close</button>
             </div>
         `;
         document.body.appendChild(popupOverlay);
@@ -249,16 +249,18 @@ if you would like to contact me, please email me at the email shown above!
             const startTimeFormatted = formatTime(startTime);
             const endTimeFormatted = formatTime(endTime);
 
-            const message = `DMD-DL only operates from ${startTimeFormatted} to ${endTimeFormatted} (Local Time)`;
+            const message = `DMD-DL only operates from ${startTimeFormatted} to ${endTimeFormatted} (Your local time)`;
             document.getElementById('popupMessage').textContent = message;
             popupOverlay.classList.add('show');
-        }
 
-        function closePopup() {
-            popupOverlay.classList.remove('show');
+            const closeButton = popupOverlay.querySelector('.close-btn');
+            closeButton.addEventListener('click', function() {
+                popupOverlay.classList.remove('show');
+            });
         }
 
         showPopup();
     });
 </script>
+
 </html>
