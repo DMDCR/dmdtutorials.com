@@ -116,7 +116,7 @@ copyright {
 <div style="margin-top:100px;"></div>
 <div style="margin-top:80px;margin-left:40px;">
 <a style="color:white;font-size:12px;padding:6px">
-<span id="downloadsLeft">[Loading downloads...]</span>
+<span id="downloadsLeft">[Loading downloads remaining...]</span>
 </a>
 <pre>
 <copyright style="font-size:30px;">
@@ -147,16 +147,21 @@ if you would like to contact me, please email me at the email shown above!
         <b style=color:#141414><a href="https://browser.rammerhead.org">legacy hidden browser</a></b>
 <div style="margin-top:30px;"></div>
 </body>
-    <script>
+<script>
     fetch('https://dl.dmdtutorials.com/api/downl')  
         .then(response => response.json())
         .then(data => {
             const downloadsLeft = data.downloads_left;
-            document.getElementById('downloadsLeft').textContent = `[You have ${downloadsLeft} downloads left on all DMD-DL downloads!]`;
+            if (downloadsLeft === 4) {
+                document.getElementById('downloadsLeft').textContent = '[No downloads made today, you have 4 to use :D]';
+            } else {
+                document.getElementById('downloadsLeft').textContent = `[You have ${downloadsLeft} downloads remaining today on all DMD-DL downloads!]`;
+            }
         })
         .catch(error => {
             console.error('Error fetching downloads:', error);
             document.getElementById('downloadsLeft').textContent = '[Error fetching data]';
         });
 </script>
+
 </html>
