@@ -120,8 +120,7 @@ copyright {
 </a>
 <pre>
 <copyright style="font-size:30px;">
-<u><a href="https://dl.dmdtutorials.com/download/test.txt" download>VPS test file (txt)</a></u>
-</copyright>
+<u><a href="https://dl.dmdtutorials.com/download/test.txt" download>VPS test file (txt)</a></u></copyright><copyright style="font-size:10px;"> (DMD-DL)</copyright>
 </pre>
 </div>
 <div style="margin-top:100px;"></div>
@@ -149,12 +148,11 @@ if you would like to contact me, please email me at the email shown above!
 <div style="margin-top:30px;"></div>
 </body>
     <script>
-    // Fetch the number of downloads left from the API endpoint
     fetch('https://dl.dmdtutorials.com/api/downl')  
         .then(response => response.json())
         .then(data => {
             const downloadsLeft = data.downloads_left;
-            document.getElementById('downloadsLeft').textContent = `[all downloads below have ${downloadsLeft} downloads left!]`;
+            document.getElementById('downloadsLeft').textContent = `[You have ${downloadsLeft} downloads left on all DMD-DL downloads!]`;
         })
         .catch(error => {
             console.error('Error fetching downloads:', error);
