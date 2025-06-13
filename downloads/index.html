@@ -143,10 +143,14 @@ if you would like to contact me, please email me at the email shown above!
         .then(response => response.json())
         .then(data => {
             const downloadsLeft = data.downloads_left;
+            const el = document.getElementById('downloadsLeft');
+
             if (downloadsLeft === 4) {
-                document.getElementById('downloadsLeft').textContent = '[No downloads made today, you have 4 to use :D]';
+                el.textContent = '[No downloads started today, you have 4 to use :D]';
+            } else if (downloadsLeft === 1) {
+                el.textContent = `[You have 1 download remaining today on all DMD-DL downloads!]`;
             } else {
-                document.getElementById('downloadsLeft').textContent = `[You have ${downloadsLeft} downloads remaining today on all DMD-DL downloads!]`;
+                el.textContent = `[You have ${downloadsLeft} downloads remaining today on all DMD-DL downloads!]`;
             }
         })
         .catch(error => {
