@@ -1,0 +1,53 @@
+Lifeline Privacy Policy
+Effective Date: 08-01-2025
+Introduction
+Welcome to Lifeline! Your safety and privacy matter to us. This Privacy Policy explains what information we collect, how we use it, and your rights. By using Lifeline (the “App”), you agree to the terms below.
+
+Information We Collect:
+• Email Address - We only collect the email you use to sign in.
+• Anonymous Reports - When you submit a report, it’s tied to a random report ID, not your email or any personal details.
+• Location Data - Your location stays on your device and is never sent over the network unless you actively submit a report.
+We do not collect: passwords, IP addresses, device identifiers, usage logs, or any tracking data.
+
+
+How We Use Your Information
+• Authentication - To let you sign in and access your account.
+• Report Management - To store and display reports for up to 48 hours. After that, they’re deleted automatically.
+• App Functionality - We don’t use your data for ads, profiling, or analytics.
+
+
+Data Retention & Deletion
+• Submitted reports are kept for exactly 48 hours, then purged automatically—no (user-side) manual overrides.
+• We never store backups of reports or any user metadata.
+• Your email stays on file only as long as your account exists.
+
+
+Sharing & Disclosure
+• We do not sell, rent, or share your personal data with third parties.
+• If legally compelled (e.g., court order), we’ll disclose only the minimal info we have—which, in practice, is nothing beyond the fact that an account exists. No logs, no report details, no location history.
+
+Security
+We follow industry-standard practices (encryption in transit, secure cloud storage*) to protect your data. However, no system is 100% foolproof. 
+*The report database is public, however, reports ARE NOT tied to you. 
+(Your email is private.)
+
+
+Your Rights
+Depending on where you live, you may have rights under GDPR, CCPA, or other laws, including:
+• Requesting access to your data*
+• Asking for corrections or deletions**
+• Opting out of data sales (not applicable, since we don’t sell [or really keep] data)
+To exercise your rights, email us at contactdmdev@gmail.com.
+* We don't keep your data, so all we can really give you is your email.
+** We don't offer deletions, because we cannot tie the data to you, and allowing anyone to delete reports defeats the point of Lifeline.
+
+Compliance
+We strive to comply with applicable privacy laws (GDPR, CCPA). If you believe we’re not following this policy, please reach out.
+Reporting Code
+Curious about how reports are handled? Our source code for report management is open on GitHub:
+https://github.com/dmdtutorials-com/lifebase
+Updates to This Policy
+This Privacy Policy is bundled with the App and can only change when you update the App. Check the “Effective Date” above to see if it’s current.
+Questions? Contact us at contactdmdev@gmail.com.
+Thanks for using Lifeline responsibly!
+- DMD
