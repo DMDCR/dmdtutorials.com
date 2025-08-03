@@ -1,5 +1,5 @@
 Lifeline Privacy Policy
-Effective Date: 08-01-2025
+Effective Date: 08-03-2025
 Introduction
 Welcome to Lifeline! Your safety and privacy matter to us. This Privacy Policy explains what information we collect, how we use it, and your rights. By using Lifeline (the “App”), you agree to the terms below.
 
@@ -27,8 +27,8 @@ Sharing & Disclosure
 • If legally compelled (e.g., court order), we’ll disclose only the minimal info we have—which, in practice, is nothing beyond the fact that an account exists. No logs, no report details, no location history.
 
 Security
-We follow industry-standard practices (encryption in transit, secure cloud storage*) to protect your data. However, no system is 100% foolproof. 
-*The report database is public, however, reports ARE NOT tied to you. 
+We follow industry-standard practices (encryption in transit, secure cloud storage*) to protect your data. However, no system is 100% foolproof.
+*The report database is public, but, reports ARE NOT tied to you.
 (Your email is private.)
 
 
@@ -43,11 +43,16 @@ To exercise your rights, email us at contactdmdev@gmail.com.
 
 Compliance
 We strive to comply with applicable privacy laws (GDPR, CCPA). If you believe we’re not following this policy, please reach out.
+
+
 Reporting Code
 Curious about how reports are handled? Our source code for report management is open on GitHub:
 https://github.com/dmdtutorials-com/lifebase
+
+
 Updates to This Policy
 This Privacy Policy is bundled with the App and can only change when you update the App. Check the “Effective Date” above to see if it’s current.
+
 Questions? Contact us at contactdmdev@gmail.com.
 Thanks for using Lifeline responsibly!
 - DMD
