@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lifeline: Stay safe, roam free. — Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#000;
+      --fg:#7fff7f;
+      --muted:#5f9f5f;
+      --panel:#001000;
+      --accent:#0f0;
+      --glass: rgba(0,255,0,0.04);
+      --mono: 'Share Tech Mono', 'Roboto Mono', monospace;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:var(--mono);
+      background: radial-gradient(ellipse at top, rgba(0,40,0,0.6), rgba(0,0,0,1) 60%), var(--bg);
+      color:var(--fg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:18px;
+      line-height:1.35;
+      letter-spacing:0.2px;
+    }
+
+    .screen{
+      max-width:980px;
+      margin:18px auto;
+      border:2px solid var(--fg);
+      border-radius:6px;
+      padding:18px;
+      background:linear-gradient(180deg, rgba(0,20,0,0.02), rgba(0,0,0,0.06));
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      position:relative;
+      overflow:hidden;
+    }
+    .scanlines:before{content:'';position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(to bottom, rgba(0,0,0,0.12) 0 1px, transparent 1px 3px)}
+
+    header{display:flex;gap:12px;align-items:center}
+    .logo{width:72px;height:72px;border:1px solid var(--fg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;background:linear-gradient(180deg, rgba(0,255,0,0.05), rgba(0,255,0,0.01));}
+    .title{font-size:1.4rem}
+    .subtitle{color:var(--muted);font-size:0.85rem}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:16px}
+    .panel{background:var(--panel);border:1px solid rgba(127,255,127,0.06);padding:12px;border-radius:6px}
+    h2{color:var(--fg);font-size:1rem;margin-bottom:8px}
+    p.lead{color:var(--fg);opacity:0.95}
+    .muted{color:var(--muted);font-size:0.88rem}
+
+    ul.posts{list-style:none;margin-top:10px}
+    ul.posts li{padding:6px 0;border-bottom:1px dashed rgba(127,255,127,0.03)}
+    a.link{color:var(--fg);text-decoration:none}
+    .k{color:#aaffaa}
+
+    .support{position:sticky;top:20px}
+    .card{padding:12px;border:1px solid rgba(127,255,127,0.06);border-radius:6px;background:rgba(0,20,0,0.06)}
+    .btn{display:inline-block;padding:8px 10px;border-radius:4px;background:var(--fg);color:#000;font-weight:700;text-decoration:none;margin-top:8px}
+    .ghost{background:transparent;color:var(--fg);border:1px solid var(--fg);padding:6px 8px}
+
+    form label{display:block;margin-top:8px;font-size:0.9rem}
+    input, textarea, select{width:100%;background:transparent;border:1px solid rgba(127,255,127,0.08);color:var(--fg);padding:8px;border-radius:4px;font-family:var(--mono);font-size:0.9rem}
+    textarea{min-height:110px}
+
+    .meta{margin-top:10px;font-size:0.85rem;color:var(--muted)}
+
+    footer{margin-top:18px;border-top:1px solid rgba(127,255,127,0.06);padding-top:10px;color:var(--muted);font-size:0.8rem;display:flex;justify-content:space-between;align-items:center}
+
+    .clutter{margin-top:12px;font-size:0.85rem;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .badge{display:inline-block;padding:4px 8px;background:rgba(0,255,0,0.06);border:1px solid rgba(127,255,127,0.06);border-radius:4px;font-weight:700}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .support{position:static}
+    }
+
+    a:focus, button:focus, input:focus, textarea:focus{outline:2px dashed rgba(127,255,127,0.25)}
+
+    .cursor{display:inline-block;width:8px;height:16px;background:var(--fg);margin-left:6px;vertical-align:middle;animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{background:transparent}}
+  </style>
+</head>
+<body>
+  <div class="screen scanlines" role="main">
+    <header>
+      <div class="logo" aria-hidden>- TBD -</div>
+      <div>
+        <div class="title">Lifeline: Stay safe, roam free.</div>
+        <div class="subtitle">map-based safety app and alerts</div>
+      </div>
+      <div style="margin-left:auto;text-align:right">
+        <div class="muted">support: <a class="link" href="mailto:contactdmdev@gmail.com">contactdmdev@gmail.com</a></div>
+        <div class="muted">version: release listing</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="panel">
+          <h2>about</h2>
+          <p class="lead">Lifeline is a map-based safety app that helps users stay aware of nearby risks and reach help when needed. Lifeline offers live safety markers, route risk overlays, quick emergency contacts, check-in tools, and community-sourced alerts. the app focuses on giving timely, location-based context while keeping user privacy central.</p>
+
+          <div class="clutter" style="margin-top:12px">
+            <div class="card">
+              <strong>features</strong>
+              <ul style="margin-top:8px;color:var(--fg);">
+                <li>live risk markers and community reports</li>
+                <li>built in privacy and automatic report clearing!</li>
+                <li>TestFlight builds available for beta testers</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>platforms</strong>
+              <p class="muted" style="margin-top:8px">ios only. requires location services and optional push notifications for alerts.</p>
+              <div style="margin-top:8px"><span class="badge">proprietary</span> <span class="badge">not open source</span></div>
+            </div>
+          </div>
+
+          <h2 style="margin-top:12px">recent updates</h2>
+          <ul class="posts">
+            <li><a class="link" href="#">01: hehe not released yet :3</a></li>
+            <li><a class="link" href="#">00: idk</a></li>
+          </ul>
+
+          <h2 style="margin-top:12px">how to report a bug</h2>
+          <p class="muted">best results: include app version, build id, device model, ios version, steps to reproduce, and screenshots or a screen recording. crash logs help a lot.</p>
+
+          <pre style="background:rgba(0,0,0,0.12);padding:8px;border-radius:4px;margin-top:8px;color:var(--fg);font-size:0.85rem;overflow:auto">sample quick report
+app: Lifeline
+version: 1.2.3(4)
+build: 2025.08.01
+device: iPhone 16 Pro
+ios: 26.0
+summary: crash when tapping random button
+steps: 1) open app 2) tap panic 3) select contact 4) crash
+attach: screenshots, console logs, crash .ips</pre>
+
+          <h2 style="margin-top:12px">privacy summary</h2>
+          <p class="muted">location data is used to provide safety features. location may be processed briefly on our servers to provide routing and alert matching. we do not sell personal data. data retention and sharing details are below in the full privacy policy.</p>
+
+          <details style="margin-top:8px;background:rgba(0,0,0,0.02);padding:8px;border-radius:4px">
+            <div style="margin-top:8px;color:var(--fg)">
+              
+            </div>
+          </details>
+
+          <h2 style="margin-top:12px">faq</h2>
+          <dl style="margin-top:8px">
+            <dt class="muted">is Lifeline free?</dt>
+            <dd>yes, the entire app is free. you can support me tho on Buy Me A Coffee via the app!</dd>
+
+            <dt class="muted" style="margin-top:8px">does Lifeline track me all the time?</dt>
+            <dd>depends, the app will use your location while in use for the map features and creating and publishing reports. the app will only use your location in small bursts in the background to check and send you accurate notifications. your location doesn't leave your device during this process.</dd>
+
+            <dt class="muted" style="margin-top:8px">is Lifeline open source?</dt>
+            <dd>no, not yet at least. Lifeline is proprietary software maintained by DMD. although some of our backend management stuff IS open source, check inside the app for more info.</dd>
+          </dl>
+
+        </section>
+
+        <footer>
+          <div>© 2021-2025, DMD™</div>
+          <div class="muted">Lifeline: Stay safe, roam free.</div>
+        </footer>
+      </main>
+
+      <aside class="support">
+        <div class="card">
+          <strong>support</strong>
+          <p class="muted" style="margin-top:8px">email us directly or open a pre-filled report using the form. we aim to respond within 24 to 48 hours.</p>
+          <p style="margin-top:8px"><a class="btn" href="mailto:contactdmdev@gmail.com?subject=Support%20Request%20-%20Lifeline">email support</a></p>
+
+          <hr style="border-color:rgba(127,255,127,0.04);margin:10px 0">
+
+          <strong>quick support form!</strong>
+          <form id="supportForm" onsubmit="event.preventDefault(); sendMail()" style="margin-top:8px">
+            <label>your name<input id="name" placeholder="optional"></label>
+            <label>your email<input id="email" placeholder="you@example.com"></label>
+            <label>app version<input id="version" placeholder="e.g. 1.0.0"></label>
+            <label>device<input id="deviceField" placeholder="iPhone 14 Pro"></label>
+            <label>short summary<textarea id="summaryField" placeholder="what happened?"></textarea></label>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn" type="submit">open draft email</button>
+              <button type="button" class="ghost" onclick="resetForm()">clear</button>
+            </div>
+            <div class="meta">we do not accept attachments via this form. attach screenshots when composing the email.</div>
+          </form>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <strong>legal</strong>
+          <p class="muted" style="margin-top:8px">Lifeline is a product of DMD Tutorials. it is proprietary software and not open source. the information on this page is provided for support and compliance with app store requirements.</p>
+          
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    function resetForm(){document.getElementById('supportForm').reset();}
+    function sendMail(){
+      const to = 'contactdmdev@gmail.com';
+      const name = document.getElementById('name').value || '';
+      const email = document.getElementById('email').value || '';
+      const version = document.getElementById('version').value || '';
+      const device = document.getElementById('deviceField').value || '';
+      const summary = document.getElementById('summaryField').value || '';
+
+      let subject = `Support request - Lifeline`;
+      if(version) subject += ` - v${version}`;
+
+      let body = `report from support page
+
+`;
+      if(name) body += `name: ${name}
+`;
+      if(email) body += `email: ${email}
+`;
+      if(device) body += `device: ${device}
+`;
+      if(version) body += `version: ${version}
+`;
+      body += `
+summary:
+${summary}
+
+please attach screenshots or logs before sending!!`;
+
+      const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
